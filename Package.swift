@@ -21,7 +21,7 @@ let package = Package(
 
         // Sources
 //        .target(name: "Geometry", dependencies: ["Math", "DataStructures"]),
-        .target(name: "Path", dependencies: []),
+        .target(name: "Path", dependencies: ["DataStructures"]),
 //        .target(name: "Rendering", dependencies: ["Path"]),
 //        .target(name: "SVG", dependencies: ["Rendering", "SWXMLHash"]),
 //        .target(name: "QuartzAdapter", dependencies: ["Rendering"]),
