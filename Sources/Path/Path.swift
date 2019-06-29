@@ -7,7 +7,7 @@
 //
 
 import Algebra
-//import DataStructures
+import DataStructures
 import Geometry
 
 public struct Path {
