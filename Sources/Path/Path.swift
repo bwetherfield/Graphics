@@ -100,6 +100,8 @@ extension Path: CollectionWrapping {
     }
 }
 
+extension Path: Collection { }
+
 extension Path: Additive {
 
     /// Empty path.
