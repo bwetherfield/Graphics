@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "Graphics",
     products: [
-        .library(name: "Geometry", targets: ["Geometry"]),
+//        .library(name: "Geometry", targets: ["Geometry"]),
         .library(name: "Path", targets: ["Path"]),
 //        .library(name: "Rendering", targets: ["Rendering"]),
 //        .library(name: "SVG", targets: ["SVG"]),
@@ -14,14 +14,14 @@ let package = Package(
     ],
     dependencies: [
 //        .package(url: "https://github.com/drmohundro/SWXMLHash", from: "4.1.1"),
-        .package(url: "https://github.com/dn-m/Math", from: "0.7.0"),
-        .package(url: "https://github.com/dn-m/Structure", from: "0.23.0")
+//        .package(url: "https://github.com/dn-m/Math", from: "0.7.0"),
+        .package(url: "https://github.com/bwetherfield/Structure", .branch("minimal-break"))
     ],
     targets: [
 
         // Sources
-        .target(name: "Geometry", dependencies: ["Math", "DataStructures"]),
-        .target(name: "Path", dependencies: ["Geometry", "Math"]),
+//        .target(name: "Geometry", dependencies: ["Math", "DataStructures"]),
+        .target(name: "Path", dependencies: []),
 //        .target(name: "Rendering", dependencies: ["Path"]),
 //        .target(name: "SVG", dependencies: ["Rendering", "SWXMLHash"]),
 //        .target(name: "QuartzAdapter", dependencies: ["Rendering"]),
