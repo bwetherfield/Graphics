@@ -33,33 +33,33 @@ public struct Path {
 //        return curves.map { $0.axisAlignedBoundingBox }.nonEmptySum ?? .zero
 //    }
     
-    public let curves: [BezierCurve]
+    public let curves: [Int]
     
     // MARK: - Initializers
 
     /// Create a `Path` with a single `curve`.
-    public init(_ curve: BezierCurve) {
+    public init(_ curve: Int) {
         self.init([curve])
     }
     
     /// Create a `Path` with the given `curves`.
-    public init(_ curves: [BezierCurve]) {
+    public init(_ curves: [Int]) {
         self.curves = curves
     }
     
     /// Create a `Path` with the given `pathElements`.
 //    public init(pathElements: [PathElement]) {
-//        
+//
 //        guard
 //            let (head, tail) = pathElements.destructured, case let .move(start) = head
 //        else {
 //            self = Path([])
 //            return
 //        }
-//        
+//
 //        let builder = Path.builder.move(to: start)
 //        var last = start
-//        
+//
 //        for element in tail {
 //            switch element {
 //            case .move(let point):
@@ -75,7 +75,7 @@ public struct Path {
 //                builder.close()
 //            }
 //        }
-//        
+//
 //        self = builder.build()
 //    }
 
@@ -95,7 +95,7 @@ public struct Path {
 
 extension Path: CollectionWrapping {
 
-    public var base: [BezierCurve] {
+    public var base: [Int] {
         return curves
     }
 }
